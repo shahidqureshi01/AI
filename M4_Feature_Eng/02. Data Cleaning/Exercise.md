@@ -5,16 +5,31 @@
 ### ❓ Missing values
 
 1. What is the missing datatype used in pandas?
+NaN
 2. How to replace all occurences of the value 9999 to missing in pandas?
+df.replace(np.NaN, 'missing')
 3. How to get the absolute number of missings for each variable in pandas?
+pd.isna().sum
 4. How to get the percentage of missings for each variable in pandas?
+pd.isna().sum() / len(pd)
 5. How to drop rows with missing values?
+df.dropna()
 6. How to drop variables with missing values?
+df.drop(columns=['Name'])
 7. What is the univariate imputation method in sklearn?
+- It adds constants for missing values e:g -990 for numeric & 'missing' for categorical
+- Mean: for numeric only
+- Median: for numeric only
+- Mode: for categorical
 8. What is the multivariate imputation method in sklearn?
+- grouping by other vars and we get Mean and Median and use it as value
+- we train ML to make an inference about the missing data
 9. What is the best univariate imputation method to categorical variables? (Explain why)
+Mode is the best univariate method for categorical variables as chances are quite high that the
+assumed value will be same as most frequently occuring value in the column. 
 10. What is the best univariate imputation method to numerical variables? (Explain why)
-
+Mean is the best univariate method for imputation for numerical variables as chances are quite hight that the 
+assumed value will be close to Mean e:g 1-2 standard deviation away from Mean.
 
 ### 🔎 Outliers
 
