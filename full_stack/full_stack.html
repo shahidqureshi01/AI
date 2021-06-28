@@ -1,0 +1,261 @@
+<!--CSS EXERCISES
+Give a maximum width to the body and center it in the page
+Set every h1 to be centered
+Change the color of each link in the page
+Create a class with a border
+Add margin between every paragraph
+Create a class that changes font size and boldness
+Create a class that hides the element
+Create a class that hides the content (hint: use visibility)
+Grab a font from fonts.google.com and set it as default
+EXTRA
+Change the form submit button background color when the mouse is over it
+Position a background image using the image tag and the position attribute
+Create a navbar always hanging from the top of the page
+use an unordered list of links to every section of the page
+remove the disc from the list items
+make sure the elements are displayed inline-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Strive school</title>
+    <style>
+      body {
+        max-width: 500px;
+        margin: auto;
+        background: white;
+        padding: 10px;
+      }
+      h1 {
+        text-align: center;
+      }
+      a {
+        color: rgb(68, 68, 116);
+      }
+      .border {
+        border: 1px solid rgb(146, 90, 90);
+      }
+      p {
+        margin: 10px, 0;
+      }
+      .double-font-size {
+        font-size: 2em;
+      }
+      .boldy {
+        font-weight: bold;
+      }
+      .hidden {
+        display: none;
+      }
+      .invisible {
+        visibility: hidden;
+      }
+      font {
+        font-family: "Open Sans", sans-serif;
+      }
+      @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
+
+      .container {
+        max-width: 400px;
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+      }
+
+      #contact input[type="text"],
+      #contact input[type="email"],
+      #contact input[type="tel"],
+      #contact input[type="url"],
+      #contact textarea,
+      #contact button[type="submit"] {
+        font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+      }
+
+      #contact {
+        background: #f9f9f9;
+        padding: 25px;
+        margin: 150px 0;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2),
+          0 5px 5px 0 rgba(0, 0, 0, 0.24);
+      }
+
+      #contact h3 {
+        display: block;
+        font-size: 30px;
+        font-weight: 300;
+        margin-bottom: 10px;
+      }
+
+      #contact h4 {
+        margin: 5px 0 15px;
+        display: block;
+        font-size: 13px;
+        font-weight: 400;
+      }
+
+      fieldset {
+        border: medium none !important;
+        margin: 0 0 10px;
+        min-width: 100%;
+        padding: 0;
+        width: 100%;
+      }
+
+      #contact input[type="text"],
+      #contact input[type="email"],
+      #contact input[type="tel"],
+      #contact input[type="url"],
+      #contact textarea {
+        width: 100%;
+        border: 1px solid #ccc;
+        background: #fff;
+        margin: 0 0 5px;
+        padding: 10px;
+      }
+
+      #contact input[type="text"]:hover,
+      #contact input[type="email"]:hover,
+      #contact input[type="tel"]:hover,
+      #contact input[type="url"]:hover,
+      #contact textarea:hover {
+        -webkit-transition: border-color 0.3s ease-in-out;
+        -moz-transition: border-color 0.3s ease-in-out;
+        transition: border-color 0.3s ease-in-out;
+        border: 1px solid #aaa;
+      }
+
+      #contact textarea {
+        height: 100px;
+        max-width: 100%;
+        resize: none;
+      }
+
+      #contact button[type="submit"] {
+        cursor: pointer;
+        width: 100%;
+        border: none;
+        background: #4caf50;
+        color: #fff;
+        margin: 0 0 5px;
+        padding: 10px;
+        font-size: 15px;
+      }
+
+      #contact button[type="submit"]:hover {
+        background: #43a047;
+        -webkit-transition: background 0.3s ease-in-out;
+        -moz-transition: background 0.3s ease-in-out;
+        transition: background-color 0.3s ease-in-out;
+      }
+
+      #contact button[type="submit"]:active {
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5);
+      }
+
+      .copyright {
+        text-align: center;
+      }
+
+      #contact input:focus,
+      #contact textarea:focus {
+        outline: 0;
+        border: 1px solid #aaa;
+      }
+      ol {
+        list-style-image: url("https://picsum.photos/20");
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Strive school</h1>
+    <ol>
+      <li><a href="https://strive.school">AI</a></li>
+      <li><a href="https://strive.school">Full stack</a></li>
+      <li><a href="https://strive.school">Front end</a></li>
+    </ol>
+
+    <hr />
+
+    <div>
+      <p>
+        Create a container with a nested paragraph and a nested unordered list
+      </p>
+      <ul>
+        <li>item 1</li>
+        <li>item 2</li>
+      </ul>
+    </div>
+    <!--form-->
+    <div class="container">
+      <form id="contact" action="" method="post">
+        <h3>Contact Form</h3>
+        <h4>Contact us</h4>
+        <fieldset>
+          <input
+            placeholder="Your name"
+            type="text"
+            tabindex="1"
+            required
+            autofocus
+          />
+        </fieldset>
+        <fieldset>
+          <input
+            placeholder="Your Email Address"
+            type="email"
+            tabindex="2"
+            required
+          />
+        </fieldset>
+        <fieldset>
+          <textarea
+            placeholder="Type your message here...."
+            tabindex="5"
+            required
+          ></textarea>
+        </fieldset>
+        <fieldset>
+          <button
+            name="submit"
+            type="submit"
+            id="contact-submit"
+            data-submit="...Sending"
+          >
+            Submit
+          </button>
+        </fieldset>
+      </form>
+    </div>
+    <!--form ends-->
+    <footer>
+      <p>Author: John Doe</p>
+      <p><a href="mailto:hege@example.com">john@example.com</a></p>
+    </footer>
+  </body>
+</html>
+
+<!--
+
+    HTML EXERCISES
+Create a title for the page
+Create a heading
+Create an ordered list
+Add an image to every element of the list
+Have every image link to 'https://strive.school'
+Divide the page using a horizontal line
+Create a container with a nested paragraph and a nested unordered list
+Create a footer with some information about the page creator. You can use a normal <div> as well as 
+    the <footer> tag.
+Create a small "Contact Us" form with sender and message (hint: use <textarea> instead of <input> for the message area.)
+
+-->
