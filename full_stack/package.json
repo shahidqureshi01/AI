@@ -1,0 +1,20 @@
+{
+  "name": "full_stack",
+  "version": "1.0.0",
+  "description": "personal website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "qcode"
+  ],
+  "author": "Shahid Qureshi",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.35.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3"
+  }
+}
