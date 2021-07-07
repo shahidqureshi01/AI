@@ -10771,7 +10771,7 @@ textarea.form-control-lg {
   line-height: 2.5rem;
 }
 .btn-rounded:hover {
-  background: linear-gradient(to right, rgba(2, 179, 228, 0.95), rgba(46, 61, 73, 0.95));
+  background: linear-gradient(to right, rgba(2, 179, 228, 0.95), rgba(46, 61, 73, 0.15));
   color: #fff;
 }
 .btn-rounded:hover span {
@@ -10779,7 +10779,7 @@ textarea.form-control-lg {
 }
 
 .menu {
-  background: linear-gradient(to right, rgba(2, 179, 228, 0.95), rgba(46, 61, 73, 0.95));
+  background: linear-gradient(to right, rgba(2, 179, 228, 0.95), rgba(46, 61, 73, 0.15));
 }
 .menu li {
   padding: 0 0.7rem;
