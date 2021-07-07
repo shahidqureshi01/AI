@@ -10746,5 +10746,52 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.btn-rounded {
+  position: relative;
+  padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  border: 0.1rem solid rgba(255, 255, 255, 0.6);
+  background-color: #fff;
+  display: block;
+}
+.btn-rounded span {
+  position: absolute;
+  background-color: #02b3e4;
+  width: 2.5rem;
+  height: 2.5rem;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+.btn-rounded span i {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 2.5rem;
+}
+.btn-rounded:hover {
+  background: linear-gradient(to right, rgba(2, 179, 228, 0.95), rgba(46, 61, 73, 0.95));
+  color: #fff;
+}
+.btn-rounded:hover span {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.menu {
+  background: linear-gradient(to right, rgba(2, 179, 228, 0.95), rgba(46, 61, 73, 0.95));
+}
+.menu li {
+  padding: 0 0.7rem;
+}
+.menu li a {
+  color: #fff;
+  padding: 0 0.7rem;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+.menu li:hover {
+  color: #fff;
+}
 
 /*# sourceMappingURL=style.css.map */
