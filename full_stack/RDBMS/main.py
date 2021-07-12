@@ -1,8 +1,5 @@
 from dotenv import dotenv_values
-config = dotenv_values(".env")
+from db import db_engine
 
-HOST= config.get("HOST")
-DB= config.get("DB")
-USER=config.get("USER")
-PASSWORD=config.get("PASSWORD")
-PORT=config.get("PORT")
+
+print(db_engine())
