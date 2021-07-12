@@ -1,5 +1,5 @@
-from dotenv import dotenv_values
 from db import db_engine
+from sqlalchemy.orm import Session
 
-
-print(db_engine())
+engine = db_engine()
+session = Session(engine, future=True)
