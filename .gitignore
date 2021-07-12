@@ -4,4 +4,4 @@
 */.ipynb_checkpoints/*
 **/yolo/darknet
 node_modules/
-.env/
+**/.env/
