@@ -25,4 +25,4 @@ class User(Base):
 		return self.password_hash
 
 	def check_password(self, password):
-		return bcrypt.checkpw(passworgpassword.encode("utf8"), hashed_password=self.password_hash.encode("utf8"))
+		return bcrypt.checkpw(password.encode("utf8"), hashed_password=self.password_hash.encode("utf8"))
