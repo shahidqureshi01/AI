@@ -10,8 +10,8 @@ SERVER_HOST = 'localhost'
 SERVER_PORT = 0 # tells the kernel to pickup a port dynamically 
 BUF_SIZE = 1024 
 ECHO_MSG = 'Hello echo server!' 
- 
- 
+
+# Client class
 class ForkedClient(): 
 	""" A client to test forking server"""     
 	def __init__(self, ip, port): 
@@ -38,3 +38,14 @@ class ForkedClient():
 		""" Cleanup the client socket """ 
 		self.sock.close() 
 
+# Server request handler class
+
+class ForkingServerRequestHandler(socketserver.BaseRequestHandler): 
+	def handle(self):         
+		data = str(self.request.recv(BUF_SIZE), 'utf-8') 
+
+		current_process_id = os.getpid() 
+		response = '%s: %s' % (current_process_id, data) 
+		print ("Server sending response [current_process_id: data] = [%s]" %response) 
+		self.request.send(bytes(response, 'utf-8')) 
+		return 
