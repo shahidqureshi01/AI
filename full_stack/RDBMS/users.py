@@ -26,3 +26,5 @@ class User(Base):
 
 	def check_password(self, password):
 		return bcrypt.checkpw(password.encode("utf8"), hashed_password=self.password_hash.encode("utf8"))
+
+#Base.metadata.create_all(engine)
