@@ -49,3 +49,11 @@ class ForkingServerRequestHandler(socketserver.BaseRequestHandler):
 		print ("Server sending response [current_process_id: data] = [%s]" %response) 
 		self.request.send(bytes(response, 'utf-8')) 
 		return 
+
+
+# Sever class
+class ForkingServer(socketserver.ForkingMixIn, socketserver.TCPServer, ): 
+  """Nothing to add here, inherited everything necessary from parents""" 
+  pass 
+ 
+ 
