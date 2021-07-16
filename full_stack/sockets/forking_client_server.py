@@ -77,3 +77,8 @@ def main():
 	client2.run() 
 
 	print("Second client running")
+	# Clean them up 
+	server.shutdown() 
+	client1.shutdown() 
+	client2.shutdown() 
+	server.socket.close() 
