@@ -59,6 +59,7 @@ class ForkingServer(socketserver.ForkingMixIn, socketserver.TCPServer, ):
  
 def main(): 
 	# Launch the server 
+	print('hello')
 	server = ForkingServer((SERVER_HOST, SERVER_PORT), ForkingServerRequestHandler) 
 	ip, port = server.server_address # Retrieve the port number 
 	server_thread = threading.Thread(target=server.serve_forever) 
@@ -83,6 +84,8 @@ def main():
 	client2.shutdown() 
 	server.socket.close() 
 
-	# run script
-	if __name__ == '__main__':
-    		main()
+# run script
+if __name__ == '__main__':
+ 	main()
+
+
