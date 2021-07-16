@@ -82,3 +82,7 @@ def main():
 	client1.shutdown() 
 	client2.shutdown() 
 	server.socket.close() 
+
+	# run script
+	if __name__ == '__main__':
+    		main()
