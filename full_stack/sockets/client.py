@@ -24,7 +24,7 @@ def echo_client(port):
         # Look for the response 
         amount_received = 0 
         amount_expected = len(message) 
-        while amount_received < amount_expected: 
+        while True: 
             data = sock.recv(16) 
             amount_received += len(data) 
             print ("Received: %s" % data) 
