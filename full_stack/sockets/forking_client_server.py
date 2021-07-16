@@ -57,3 +57,23 @@ class ForkingServer(socketserver.ForkingMixIn, socketserver.TCPServer, ):
   pass 
  
  
+def main(): 
+	# Launch the server 
+	server = ForkingServer((SERVER_HOST, SERVER_PORT), ForkingServerRequestHandler) 
+	ip, port = server.server_address # Retrieve the port number 
+	server_thread = threading.Thread(target=server.serve_forever) 
+	server_thread.setDaemon(True) # don't hang on exit 
+	server_thread.start() 
+	print ("Server loop running PID: %s" %os.getpid()) 
+		
+	# Launch the client(s) 
+
+	client1 =  ForkedClient(ip, port) 
+	client1.run() 
+
+	print("First client running") 
+		
+	client2 =  ForkedClient(ip, port) 
+	client2.run() 
+
+	print("Second client running")
